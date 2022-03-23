@@ -1,7 +1,7 @@
 module.exports = {
     // 选项...
     publicPath: process.env.NODE_ENV === 'production'
-    ? '/r_generate'
+    ? '/aicd_generate'
     : '/',
     pwa: {
         manifestOptions: {
