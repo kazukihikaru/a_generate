@@ -175,16 +175,18 @@ export default {
         let hour = Math.floor(Math.random() * 10 + 1);
         let minutes = Math.floor(Math.random() * 60 + 1);
         let seconds = Math.floor(Math.random() * 60 + 1);
+
         // and the formula is:
         let subDay = i + 1;
         const testTime = dayjs()
           .subtract(subDay, 'day')
           .format('YYYY-MM-DD HH:mm:ss');
+
         const reportTime = dayjs(testTime, 'YYYY-MM-DD HH:mm:ss').add(1, 'day');
 
         const data = {
           testTime: dayjs(testTime)
-            .subtract(hour, 'day')
+            .subtract(subDay, 'day')
             .subtract(hour, 'hour')
             .subtract(minutes, 'minute')
             .subtract(seconds, 'second')
