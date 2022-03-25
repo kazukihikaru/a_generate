@@ -61,7 +61,7 @@
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="8"><span class="text">样本编号</span></Col>
+              <Col span="8"><span class="text">样本编码</span></Col>
               <Col span="16"
                 ><span class="textBlack">{{ index.testNo }}</span></Col
               >
@@ -213,6 +213,8 @@ export default {
 }
 .text {
   font-size: 16px;
+  text-align: left;
+  float: left;
 }
 .textBlack {
   font-size: 16px;
