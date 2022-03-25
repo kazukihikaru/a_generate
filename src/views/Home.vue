@@ -36,8 +36,8 @@
           </Row>
           <div class="card">
             <Row style="height: 40px">
-              <Col span="10"><span class="text">姓名</span></Col>
-              <Col span="14">
+              <Col span="8"><span class="text">姓名</span></Col>
+              <Col span="16">
                 <span class="textBlack">
                   <img
                     src="../assets/images/eye.png"
@@ -47,12 +47,12 @@
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">证件类型</span></Col>
-              <Col span="14"><span class="textBlack">身份证</span></Col>
+              <Col span="8"><span class="text">证件类型</span></Col>
+              <Col span="16"><span class="textBlack">身份证</span></Col>
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">证件号码</span></Col>
-              <Col span="14"
+              <Col span="8"><span class="text">证件号码</span></Col>
+              <Col span="16"
                 ><span class="textBlack">{{
                   id.substr(0, 4) +
                   '***********' +
@@ -61,34 +61,34 @@
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">样本编号</span></Col>
-              <Col span="14"
+              <Col span="8"><span class="text">样本编号</span></Col>
+              <Col span="16"
                 ><span class="textBlack">{{ index.testNo }}</span></Col
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text blue">采样时间</span></Col>
-              <Col span="14"
+              <Col span="8"><span class="text blue">采样时间</span></Col>
+              <Col span="16"
                 ><span class="textBlack blue">{{ index.testTime }}</span></Col
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">检测机构</span></Col>
-              <Col span="14"
+              <Col span="8"><span class="text">检测机构</span></Col>
+              <Col span="16"
                 ><span class="textBlack">{{
                   hostipal[Math.floor(Math.random() * hostipal.length)]
                 }}</span></Col
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">检测时间</span></Col>
-              <Col span="14"
+              <Col span="8"><span class="text">检测时间</span></Col>
+              <Col span="16"
                 ><span class="textBlack">{{ index.reportTime }}</span></Col
               >
             </Row>
             <Row style="height: 40px">
-              <Col span="10"><span class="text">检测项目</span></Col>
-              <Col span="14"><span class="textBlack">核酸</span></Col>
+              <Col span="8"><span class="text">检测项目</span></Col>
+              <Col span="16"><span class="textBlack">核酸</span></Col>
             </Row>
 
             <hr style="border: 1px dotted; color: #ccc" />
@@ -138,10 +138,17 @@ export default {
       isShow: false,
       genearteShow: true,
       hostipal: [
-        '上海市嘉定区江桥医院',
+        '上海金域医学检验所',
+        '上海枫林医学检验所',
+        '上海华大医学检验所',
+        '上海艾迪康医学检验所',
+        '上海之江医学检验所',
+        '上海兰卫医学检验所',
+        '上海贝瑞和康医学检验所',
+        '上海中检医学检验所',
+        '上海千麦博米乐医学检验所',
         '上海宝藤医学检验所',
-        '上海华测艾普医学检验所',
-        '上海中检医学检验所'
+        '上海华测艾普医学检验所'
       ]
     };
   },
