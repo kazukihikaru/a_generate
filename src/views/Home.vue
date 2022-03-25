@@ -172,15 +172,23 @@ export default {
     },
     makeReport() {
       for (var i = 0; i < this.count; i++) {
+        let hour = Math.floor(Math.random() * 10 + 1);
+        let minutes = Math.floor(Math.random() * 60 + 1);
+        let seconds = Math.floor(Math.random() * 60 + 1);
         // and the formula is:
         let subDay = i + 1;
         const testTime = dayjs()
           .subtract(subDay, 'day')
           .format('YYYY-MM-DD HH:mm:ss');
-        const reportTime = dayjs(testTime, 'YYYY-MM-DD HH:mm:ss').add(2, 'day');
+        const reportTime = dayjs(testTime, 'YYYY-MM-DD HH:mm:ss').add(1, 'day');
 
         const data = {
-          testTime: testTime,
+          testTime: dayjs(testTime)
+            .subtract(hour, 'day')
+            .subtract(hour, 'hour')
+            .subtract(minutes, 'minute')
+            .subtract(seconds, 'second')
+            .format('YYYY-MM-DD HH:mm:ss'),
           reportTime: reportTime.format('YYYY-MM-DD'),
           testNo: getRandom(10)
         };
